@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='bg-blue-50'>
       <nav>
         <ul className='p-4 flex justify-between align-center space-x-4'>
           <li className='p-4'>Logo</li>
@@ -38,7 +38,7 @@ function App() {
         </p>
 
         <h2 className='text-3xl font-bold text-center pb-6'>Apply</h2>
-        <form>
+        <form className='w-full bg-white rounded shadow-lg p-8 md:p-16'>
           <div className='flex flex-col mb-4'>
             <label
               className='mb-2 font-bold text-lg text-gray-darkest'
@@ -46,7 +46,12 @@ function App() {
             >
               Resume
             </label>
-            <label for='resume'>Upload Resume</label>
+            <label
+              className='transition block bg-blue-500 hover:bg-blue-700 text-white text-lg mx-auto py-2 px-3 rounded'
+              for='resume'
+            >
+              Upload Resume
+            </label>
             <input className='absolute invisible' type='file' id='resume' />
           </div>
           <div class='flex flex-col mb-4'>
@@ -98,14 +103,23 @@ function App() {
             >
               Cover Letter
             </label>
-            <label for='cover-letter'>Upload Cover Letter</label>
+            <label
+              className='transition block bg-blue-500 hover:bg-blue-700 text-white text-lg mx-auto py-2 px-3 rounded'
+              for='cover-letter'
+            >
+              Upload Cover Letter
+            </label>
             <input
               className='absolute invisible'
               id='cover-letter'
               type='file'
             />
           </div>
-          <input type='submit' value='Submit' />
+          <input
+            className='transition block bg-blue-400 hover:bg-blue-500 text-white text-lg mx-auto px-4 py-2 rounded font-medium'
+            type='submit'
+            value='Submit'
+          />
         </form>
       </main>
     </div>
