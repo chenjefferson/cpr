@@ -39,16 +39,72 @@ function App() {
 
         <h2 className='text-3xl font-bold text-center pb-6'>Apply</h2>
         <form>
-          <label for='resume'>Resume</label>
-          <input type='file' id='resume' />
-          <label for='first-name'>First Name</label>
-          <input type='text' id='first-name' placeholder='Your First Name' />
-          <label for='last-name'>Last Name</label>
-          <input type='text' id='last-name' placeholder='Your Last Name' />
-          <label for='emial'>E-mail</label>
-          <input type='text' id='email' placeholder='Your E-mail' />
-          <label for='cover-letter'>Cover Letter</label>
-          <input type='file' />
+          <div className='flex flex-col mb-4'>
+            <label
+              className='mb-2 font-bold text-lg text-gray-darkest'
+              for='resume'
+            >
+              Resume
+            </label>
+            <label for='resume'>Upload Resume</label>
+            <input className='absolute invisible' type='file' id='resume' />
+          </div>
+          <div class='flex flex-col mb-4'>
+            <label
+              className='mb-2 font-bold text-lg text-gray-darkest'
+              for='first-name'
+            >
+              First Name
+            </label>
+            <input
+              className='border py-2 px-3 text-gray-darkest'
+              type='text'
+              id='first-name'
+              placeholder='Your First Name'
+            />
+          </div>
+          <div className='flex flex-col mb-4'>
+            <label
+              className='mb-2 font-bold text-lg text-gray-darkest'
+              for='last-name'
+            >
+              Last Name
+            </label>
+            <input
+              className='border py-2 px-3 text-gray-darkest'
+              type='text'
+              id='last-name'
+              placeholder='Your Last Name'
+            />
+          </div>
+          <div className='flex flex-col mb-4'>
+            <label
+              className='mb-2 font-bold text-lg text-gray-darkest'
+              for='email'
+            >
+              E-mail
+            </label>
+            <input
+              className='border py-2 px-4 text-gray-darkest'
+              type='email'
+              id='email'
+              placeholder='Your E-mail'
+            />
+          </div>
+          <div className='flex flex-col pb-4'>
+            <label
+              className='mb-2 font-bold text-lg text-gray-darkest'
+              for='cover-letter'
+            >
+              Cover Letter
+            </label>
+            <label for='cover-letter'>Upload Cover Letter</label>
+            <input
+              className='absolute invisible'
+              id='cover-letter'
+              type='file'
+            />
+          </div>
           <input type='submit' value='Submit' />
         </form>
       </main>
